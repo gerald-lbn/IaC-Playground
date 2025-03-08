@@ -1,0 +1,9 @@
+username: "gerald"
+
+shell: "/bin/bash"
+
+packages:
+  - git
+  - htop
+  - btop
+  - neofetch

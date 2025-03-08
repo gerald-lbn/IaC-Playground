@@ -1,0 +1,12 @@
+---
+- name: Dockerize Vaultwarden
+  community.docker.docker_container:
+    name: "vaultwarden"
+    image: "vaultwarden/server:latest"
+    ports:
+      - "5173:80"
+    volumes:
+      - "/home/{{ username }}/docker/vaultwarden:/data"
+    restart_policy: "always"
+    env:
+      DOMAIN: http://0.0.0.0

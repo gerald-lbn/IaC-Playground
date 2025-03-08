@@ -1,0 +1,9 @@
+---
+- name: Essentials
+  ansible.builtin.include_tasks: essentials.yml
+
+- name: SSH
+  ansible.builtin.include_tasks: ssh.yml
+
+- name: User
+  ansible.builtin.include_tasks: user.yml

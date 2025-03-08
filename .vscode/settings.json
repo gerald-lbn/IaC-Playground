@@ -1,0 +1,6 @@
+{
+  "ansible.python.interpreterPath": "/usr/bin/python3",
+  "ansible.ansible.path": "/usr/bin/ansible",
+  "ansible.ansible.useFullyQualifiedCollectionNames": false,
+  "ansible.playbook.arguments": "-i hosts.yml --ask-vault-password"
+}

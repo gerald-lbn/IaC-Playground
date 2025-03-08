@@ -1,0 +1,31 @@
+username: "gerald"
+password: "password"
+
+shell: "/bin/bash"
+
+
+# Geerlingguy's role variables
+security_ssh_allowed_users:
+  - "{{ username }}"
+
+pip_install_packages:
+  - name: docker
+
+
+ssh_port: 22
+
+security_ssh_password_authentication: "no"
+security_ssh_permit_root_login: "no"
+security_ssh_usedns: "no"
+security_ssh_permit_empty_password: "no"
+security_ssh_challenge_response_auth: "no"
+security_ssh_gss_api_authentication: "no"
+security_ssh_x11_forwarding: "no"
+
+###
+
+packages:
+  - git
+  - htop
+  - btop
+  - neofetch

@@ -1,0 +1,28 @@
+---
+- name: Dockerize Homer
+  community.docker.docker_container:
+    name: "homer"
+    image: "b4bz/homer:latest"
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/home/{{ username }}/docker/homer:/www/assets"
+    restart_policy: "always"
+    env:
+      INIT_ASSETS: "1"
+
+- name: Overwrite Homer configuration
+  copy:
+    src: "roles/containers/files/homer/config.yml"
+    dest: "/home/{{ username }}/docker/homer/config.yml"
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: "0644"
+
+- name: Overwrite Homer styles
+  copy:
+    src: "roles/containers/files/homer/custom.css"
+    dest: "/home/{{ username }}/docker/homer/custom.css"
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: "0644"

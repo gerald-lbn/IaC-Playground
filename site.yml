@@ -1,0 +1,9 @@
+- name: Run essential tasks
+  hosts: all
+  become: true
+
+  roles:
+    - role: system
+    - role: containers
+    - role: geerlingguy.docker
+    - role: geerlingguy.pip

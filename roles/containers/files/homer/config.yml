@@ -1,0 +1,67 @@
+---
+# Homepage configuration
+# See https://fontawesome.com/search for icons options
+
+title: "Demo dashboard"
+subtitle: "Homer"
+logo: "logo.png"
+# icon: "fas fa-skull-crossbones" # Optional icon
+
+header: true
+footer: false
+
+# Optional theme customization
+theme: default
+stylesheet:
+  - assets/custom.css
+
+# Layout
+columns: "3"
+defaults:
+  layout: vertical
+
+# Services
+# First level array represent a group.
+# Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
+services:
+  - name: "Media"
+    icon: "fa-solid fa-photo-video"
+
+  - name: "Services"
+    icon: "fa-solid fa-bars-staggered"
+    items:
+      - name: Nextcloud
+        type: Nextcloud
+        logo: "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/nextcloud.svg"
+        url: ""
+
+      - name: "Immich"
+        type: "Immich"
+        logo: "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/immich.svg"
+        url: ""
+        apikey: "<--- Your api key --->" # administrator user
+        updateInterval: 5000 # (Optional) Interval (in ms) for updating the stats
+
+      - name: "Uptime Kuma"
+        type: "UptimeKuma"
+        logo: "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/uptime-kuma.svg"
+        url: ""
+
+      - name: "Vaultwarden"
+        logo: "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/vaultwarden-light.svg"
+        url: ""
+
+      - name: "Coolify"
+        logo: "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/coolify.svg"
+        url: ""
+
+  - name: "System"
+    icon: "fa-solid fa-server"
+    items:
+      - name: "Duplicati"
+        logo: "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/duplicati.svg"
+        url: ""
+
+      - name: "Ntfy"
+        logo: "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/ntfy.svg"
+        url: ""

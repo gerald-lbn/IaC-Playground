@@ -1,0 +1,11 @@
+body #app .column.is-4 > div {
+  --_spacing: 1.5rem;
+  --_border-radius: 0.75rem;
+
+  margin-top: var(--_spacing);
+  margin-bottom: var(--_spacing);
+
+  > div.card {
+    border-radius: var(--_border-radius);
+  }
+}

@@ -1,0 +1,6 @@
+---
+- name: Homer
+  ansible.builtin.include_tasks: homer.yml
+
+- name: Vaultwarden
+  ansible.builtin.include_tasks: vaultwarden.yml
